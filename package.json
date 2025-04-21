@@ -2,7 +2,9 @@
   "name": "playwrightlecturenew",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "formPage":"npx playwright test form_page.spec.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
