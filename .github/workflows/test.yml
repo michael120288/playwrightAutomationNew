@@ -45,7 +45,7 @@ jobs:
       - name: Notify Telegram (✅)
         if: success()
         run: |
-            curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+            curl -s -X POST https://api.telegram.org/bot8198510322:AAGpFa-EISZiUpYYcGKPYiqwVfAMToWKuY8/sendMessage \
             -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
             -d text="✅ *Playwright tests passed!* for _${{ github.repository }}_" \
             -d parse_mode=Markdown
@@ -54,6 +54,6 @@ jobs:
         if: failure()
         run: |
             curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
-            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+            -d chat_id=708290147 \
             -d text="❌ *Playwright tests failed!* for _${{ github.repository }}_. Check logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             -d parse_mode=Markdown
